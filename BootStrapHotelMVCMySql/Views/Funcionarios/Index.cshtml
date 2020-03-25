@@ -10,24 +10,50 @@
     <form method="post">
         <label for="Nome">Nome:</label>
         <input type="text" class="form-control" name="Nome" Id="Nome" placeholder="Informe o nome do Funcionário" />
-       @Html.ValidationMessage("Nome")
+        @Html.ValidationMessage("Nome")
 
         <label for="Cargo">Cargo:</label>
-        <input type="text" class="form-control" name="Cargo" id="Cargo" placeholder="Informe o cargo do Funcionário"  />
-       @Html.ValidationMessage("Cargo")
+        <input type="text" class="form-control" name="Cargo" id="Cargo" placeholder="Informe o cargo do Funcionário" />
+        @Html.ValidationMessage("Cargo")
+
         <label for="Email">Email:</label>
         <input type="email" class="form-control" name="Email" id="Email" placeholder="Informe o email do Funcionário" />
         @Html.ValidationMessage("Email")
 
-        <label for="Telefone">Cargo:</label>
-        <input type="tel" class="form-control" name="Telefone" Id="Telefone" placeholder="Informe o tel do Funcionário" />
+        <label for="Phone">Cargo:</label>
+        <input type="tel" class="form-control" name="Phone" Id="Phone" placeholder="Informe o tel do Funcionário" />
         @Html.ValidationMessage("Phone")
 
         <label for="Foto">Foto:</label>
-        <input type="image" class="form-control" name="Foto" Id="Foto" placeholder="Informe a imagem do Funcionário" />
+        <input type="file" class="form-control" name="Foto" Id="Foto" />
         @Html.ValidationMessage("Foto")
 
         <input type="submit" class="btn-primary" name="enviar" />
+        <br /><br />
+
+        @if (Model.Nome!=null)
+        {
+            <label for="Dados">Dados Enviados para Armazenamento</label><br />
+            <label for="snome">Nome</label><br />
+            @ViewData.Model.Nome
+            <br /><br />
+
+            <label for="scargo">Cargo</label><br />
+            @ViewData.Model.Cargo
+            <br /><br />
+
+            <label for="semail">Email</label><br />
+            @ViewData.Model.Email
+            <br /><br />
+
+            <label for="semail">Telefone</label><br />
+            @ViewData.Model.Phone
+            <br /><br />
+
+            <label for="sfoto">Foto</label><br />
+            @ViewData.Model.Foto
+            <br />
+        }
 
     </form>
 </div>
