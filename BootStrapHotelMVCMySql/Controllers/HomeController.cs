@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BootStrapHotelMVCMySql.Models;
 
 namespace BootStrapHotelMVCMySql.Controllers
 {
@@ -10,7 +11,8 @@ namespace BootStrapHotelMVCMySql.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            Funcionarios funcionarios = new Funcionarios();
+            return View(funcionarios);
         }
     }
 }

@@ -38,6 +38,9 @@
                     <li id="services">
                         @Html.ActionLink("Services", "Index", "Services")
                     </li>
+                    <li id="funcionarios">
+                        @Html.ActionLink("Funcionarios","Index", "Funcionarios")
+                    </li>
                     <li id="contact">
                         @Html.ActionLink("Contact", "Index", "Contact")
                     </li>
@@ -99,7 +102,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Company 2013</p>
+                    <p>Copyright &copy; Company 2013 - @DateTime.Now.Year.ToString();</p>
                 </div>
             </div>
         </footer>

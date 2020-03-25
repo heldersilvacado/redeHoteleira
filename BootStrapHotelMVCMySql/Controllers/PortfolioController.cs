@@ -1,6 +1,4 @@
-﻿---------------------------------
-
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 
 namespace BootStrapHotelMVCMySql.Controllers

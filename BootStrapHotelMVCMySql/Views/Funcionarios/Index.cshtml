@@ -1,0 +1,33 @@
+﻿@model BootStrapHotelMVCMySql.Models.Funcionarios
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<div class="container">
+    <form method="post">
+        <label for="Nome">Nome:</label>
+        <input type="text" class="form-control" name="Nome" Id="Nome" placeholder="Informe o nome do Funcionário" />
+       @Html.ValidationMessage("Nome")
+
+        <label for="Cargo">Cargo:</label>
+        <input type="text" class="form-control" name="Cargo" id="Cargo" placeholder="Informe o cargo do Funcionário"  />
+       @Html.ValidationMessage("Cargo")
+        <label for="Email">Email:</label>
+        <input type="email" class="form-control" name="Email" id="Email" placeholder="Informe o email do Funcionário" />
+        @Html.ValidationMessage("Email")
+
+        <label for="Telefone">Cargo:</label>
+        <input type="tel" class="form-control" name="Telefone" Id="Telefone" placeholder="Informe o tel do Funcionário" />
+        @Html.ValidationMessage("Phone")
+
+        <label for="Foto">Foto:</label>
+        <input type="image" class="form-control" name="Foto" Id="Foto" placeholder="Informe a imagem do Funcionário" />
+        @Html.ValidationMessage("Foto")
+
+        <input type="submit" class="btn-primary" name="enviar" />
+
+    </form>
+</div>
